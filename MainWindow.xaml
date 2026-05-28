@@ -1,0 +1,62 @@
+﻿<Window x:Class="ChatBot_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatBot_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="AliceBlue">
+        <StackPanel Margin="20">
+
+            <!-- ASCII ART -->
+            <TextBlock x:Name="txtAscii" 
+                       Text="Loading..." 
+                       FontFamily="Consolas" FontSize="8" 
+                       Foreground="DarkGreen" 
+                       HorizontalAlignment="Center" 
+                       Margin="0,0,0,10"
+                       LineHeight="10"/>
+
+            <TextBlock Text="Cybersecurity Awareness Chatbot"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       Margin="0,0,0,20"
+                       HorizontalAlignment="Center"/>
+
+            <!-- Chat Display -->
+            <TextBox x:Name="txtChat"
+                     Height="250"
+                     Width="400"
+                     IsReadOnly="True"
+                     TextWrapping="Wrap"
+                     VerticalScrollBarVisibility="Auto"
+                     Margin="0,0,0,10"
+                     Background="White"
+                     BorderBrush="Black"
+                     BorderThickness="1"
+                     FontFamily="Consolas"
+                     FontSize="12"
+                     Padding="5"/>
+
+            <!-- User Input -->
+            <TextBox x:Name="txtMessage"
+                     Height="35"
+                     Width="400"
+                     Margin="0,0,0,10"
+                     Background="White"
+                     BorderBrush="Black"
+                     BorderThickness="1"
+                     FontSize="14"
+                     Padding="5"
+                     KeyDown="txtMessage_KeyDown"/>
+
+            <!-- Send Button -->
+            <Button Content="Send"
+                    Width="100" Height="35"
+                    HorizontalAlignment="Center"
+                   Click="SendButton_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
